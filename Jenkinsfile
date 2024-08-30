@@ -8,6 +8,12 @@ pipeline {
                 sh 'ls -lrt'
                 
             }
-    }
+        }
+        stage('deploy'){
+            step{
+                runAnsible()
+            }
+        }
+        
     }
 }
