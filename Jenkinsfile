@@ -5,8 +5,9 @@ pipeline {
         stage('List') {
             steps {
                 echo 'Hello World'
-                ls -lrt
             }
+            steps{
+                ls -lrt
         }
     }
 }
