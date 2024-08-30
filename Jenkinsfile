@@ -5,7 +5,7 @@ pipeline {
         stage('List') {
             steps {
                 echo 'Hello World'
-                ls /var/lib/jenkins/workspace/test
+               
             }
         }
     }
