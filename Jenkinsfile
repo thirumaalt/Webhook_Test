@@ -10,7 +10,7 @@ pipeline {
             }
         }
         stage('deploy'){
-            step{
+            steps{
                 runAnsible()
             }
         }
