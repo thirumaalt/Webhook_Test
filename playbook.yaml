@@ -1,5 +1,6 @@
 ---
 - hosts: apiserver
+  become: yes
   tasks:
     - name: Echo "helloworld"
       command: echo helloworld
@@ -7,7 +8,7 @@
       file:
         path: /tmp/test1
         state: absent
-      become: yes
+      
     - name: copy file
       file:
         src: /tmp/test2/a.txt
