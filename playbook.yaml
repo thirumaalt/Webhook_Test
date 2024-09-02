@@ -7,7 +7,7 @@
       file:
         path: /tmp/test1
         state: absent
-      became: yes
+      become: yes
     - name: copy file
       file:
         src: /tmp/test2/a.txt
