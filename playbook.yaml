@@ -14,3 +14,8 @@
         src: /tmp/test2/a.txt
         dest: /tmp/test3/a.txt
         remote_src: yes
+    - name: restart
+      systemd:
+        name: apache2
+        state: restarted
+        enabled : yes
