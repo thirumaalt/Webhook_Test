@@ -11,7 +11,7 @@ pipeline {
         }
         stage('deploy'){
             steps{
-                runAnsible()
+                sh 'whoami'
             }
         }
         
