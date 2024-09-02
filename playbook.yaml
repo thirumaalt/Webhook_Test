@@ -1,0 +1,5 @@
+---
+- hosts: apiserver
+  tasks:
+    - name: Echo "helloworld"
+      command: echo helloworld
