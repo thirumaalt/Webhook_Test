@@ -3,3 +3,12 @@
   tasks:
     - name: Echo "helloworld"
       command: echo helloworld
+    - name: delete file
+      file:
+        path: /tmp/test1
+        state: absent
+    - name: copy file
+      file:
+        src: /tmp/test2/a.txt
+        dest: /tmp/test3/a.txt
+        
