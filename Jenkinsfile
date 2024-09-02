@@ -1,6 +1,6 @@
 pipeline {
     agent any
-    ENVIRONMENT {
+    environment {
         SERVERS = ${servers}
     
     }
