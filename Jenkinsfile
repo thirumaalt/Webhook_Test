@@ -1,26 +1,12 @@
 pipeline {
     agent any
-    environment {
-        SERVERS = "${params.servers}"
-    
-    }
-    
 
     stages {
-        stage('List') {
+        stage('Test Parameter') {
             steps {
-                echo 'Hello World'
-                sh 'ls -lrt'
-                
+                echo "Parameter 'servers' is: ${params.servers}"
+                echo "Environment variable 'SERVERS' is: ${env.SERVERS}"
             }
         }
-        stage('deploy'){
-            steps{
-                sh 'whoami'
-                echo '${params.servers}'
-                sh 'sudo -u ansible ansible-playbook -i /var/lib/jenkins/workspace/pipe1/inventory /var/lib/jenkins/workspace/pipe1/playbook.yaml --limit ${SERVERS}'
-            }
-        }
-        
     }
 }
