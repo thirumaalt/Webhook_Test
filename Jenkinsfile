@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-        SERVERS = "${servers}"
+        SERVERS = "${params.servers}"
     
     }
     
