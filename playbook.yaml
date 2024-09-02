@@ -1,6 +1,5 @@
 ---
-- hosts: apiserver
-  become: yes
+- become: yes
   tasks:
     - name: Echo "helloworld"
       command: echo helloworld
