@@ -10,7 +10,7 @@
         state: absent
       
     - name: copy file
-      file:
+      copy:
         src: /tmp/test2/a.txt
         dest: /tmp/test3/a.txt
         
